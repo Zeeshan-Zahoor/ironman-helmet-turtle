@@ -3,7 +3,8 @@ This project is a step-by-step creation of Iron Man's helmet using the Python Tu
 
 ## Current Progress
 - Completed the outer shell of the helmet.
+- Completed the inner face cover of the helmet. (yellow coloured)
 
 ## How to Run
-1. Ensure Python is installed on your system.
-2. Run the `outer_helmet_shell.py` file.
+1. Ensure Python is installed on your system along with the module `turtle`.
+2. Run the `ironman_helmet.py` file.
