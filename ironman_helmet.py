@@ -180,6 +180,3 @@ def draw_face_cover():
 	t.end_fill()  # Fill the mirrored shape with the specified color
 
 	# Inner helmet cover (mirrored side) completed
-
-draw_outer_helmet_shell()
-draw_face_cover()
