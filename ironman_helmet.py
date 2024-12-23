@@ -180,3 +180,97 @@ def draw_face_cover():
 	t.end_fill()  # Fill the mirrored shape with the specified color
 
 	# Inner helmet cover (mirrored side) completed
+
+	
+# function to draw the eyes
+def draw_eyes():
+	# Drawing the left eye of the Iron Man helmet
+	t.color('black')  # Set the pen color to black
+	t.pencolor('black')  # Set the outline color to black
+	t.up()  # Lift the pen to move without drawing
+	t.goto(-160, 30)  # Position the turtle to the left side of the helmet
+	t.down()  # Lower the pen to start drawing
+
+	# Start drawing the left eye
+	t.setheading(0)  # Set the heading to 0 degrees (right direction)
+	t.right(20)  # Slight right turn to shape the eye
+
+	# Draw the left eye outline (a rounded rectangle)
+	for i in range(4):  # Draw the four sides of the eye
+		t.forward(4)  # Move forward a short distance
+		t.left(1 / 2)  # Slight left turn to round the corners
+
+	t.left(90)  # Turn left 90 degrees to form the rectangle
+
+	# Begin filling the eye with color
+	t.begin_fill()  # Start filling the shape with color
+	t.fillcolor('blue')  # Set the fill color to blue
+	t.forward(20)  # Draw the top side of the rectangle
+	t.right(90)  # Turn right 90 degrees
+
+	# Draw the inner part of the left eye
+	for i in range(26):  # Draw the inner curve on the top
+		t.forward(4)  # Move forward a short distance
+		t.left(1 / 2)  # Turn left slightly for the curve
+
+	# Draw the sides of the eye
+	for i in range(26):  # Draw the vertical sides
+		t.forward(4)  # Move forward a short distance
+		t.left(1 / 2)  # Turn left slightly to continue the curve
+
+	# Complete the left side by drawing the bottom of the eye
+	for i in range(26):  # Complete the bottom curve
+		t.backward(4)  # Move backward to close the shape
+		t.rt(1 / 2)  # Turn right to continue shaping the curve
+
+	# Add details to the left eye shape
+	t.right(100)  # Turn right to shape the side
+	t.forward(16)  # Move forward to extend the side of the eye
+	t.right(75)  # Turn right by 75 degrees
+	t.forward(75)  # Draw a long segment for the bottom
+	t.right(32)  # Turn right to shape the last part of the eye
+	t.forward(35)  # Draw the final segment to complete the eye
+
+	# End the fill for the eye shape
+	t.end_fill()  # Fill the inner eye with blue color
+
+	# Drawing the right eye (mirror image of the left eye)
+	t.up()  # Lift the pen to move without drawing
+	t.goto(160, 30)  # Position the turtle to the right side of the helmet
+	t.down()  # Lower the pen to start drawing
+
+	# Start drawing the right eye (mirrored)
+	t.setheading(180)  # Set the heading to 180 degrees (left direction)
+	t.left(20)  # Slight left turn to shape the eye
+
+	# Draw the right eye outline (a rounded rectangle)
+	for g in range(4):  # Draw the four sides of the eye
+		t.forward(4)  # Move forward a short distance
+		t.right(1 / 2)  # Slight right turn to round the corners
+
+	t.right(90)  # Turn right 90 degrees to form the rectangle
+
+	# Begin filling the right eye with color
+	t.begin_fill()  # Start filling the shape with color
+	t.fillcolor('blue')  # Set the fill color to blue
+	t.forward(20)  # Draw the top side of the rectangle
+	t.left(90)  # Turn left 90 degrees
+
+	# Draw the inner part of the right eye
+	for h in range(26):  # Draw the inner curve on the top
+		t.forward(4)  # Move forward a short distance
+		t.right(1 / 2)  # Turn right slightly for the curve
+
+	# Complete the right side of the eye
+	t.left(100)  # Turn left to continue shaping the eye
+	t.forward(16)  # Move forward to extend the side of the eye
+	t.left(75)  # Turn left by 75 degrees
+	t.forward(75)  # Draw a long segment for the bottom
+	t.left(32)  # Turn left to shape the last part of the eye
+	t.forward(35)  # Draw the final segment to complete the eye
+	t.backward(35)  # Move backward to close the shape
+
+	# End the fill for the right eye shape
+	t.end_fill()  # Fill the inner eye with blue color
+	t.up()  # Lift the pen to stop drawing
+	# eyes completed
