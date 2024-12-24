@@ -274,3 +274,110 @@ def draw_eyes():
 	t.end_fill()  # Fill the inner eye with blue color
 	t.up()  # Lift the pen to stop drawing
 	# eyes completed
+
+# function to draw the black vantilations of helmet along with mouth shape
+def draw_face_vantilation_with_mouth():
+	# black ventilation part 1 with left side of mouth (Iron Man helmet)
+	t.pensize(5)  # Set pen size for drawing
+	t.pencolor('black')  # Set pen color to black
+	t.up()  # Lift pen to move without drawing
+	t.goto(-183, -60)  # Move to starting point of the first ventilation part
+	t.begin_fill()  # Begin filling the shape with black color
+	t.fillcolor('black')  # Set fill color to black
+	t.down()  # Lower the pen to start drawing
+	t.setheading(0)  # Set turtle heading to 0 (right direction)
+	t.rt(60)  # Turn turtle 60 degrees to the right
+
+	# Draw first ventilation section with curved edges
+	for i in range(28):  # Loop to draw curved part
+		t.forward(7)  # Move forward by 7 units
+		t.rt(3 / 2)  # Slightly turn right to form curve
+
+	# Draw the next part of the ventilation shape
+	t.right(90 + 67)  # Turn the turtle to the correct angle
+	t.forward(205)  # Draw the long horizontal edge
+	t.end_fill()  # Fill the shape with black color
+	t.backward(205)  # Move backward to the starting point
+
+	# Set the heading to 0 degrees (right direction)
+	t.setheading(0)
+	t.right(55)  # Turn right to form the next part of the ventilation
+	t.begin_fill()  # Start filling the next part with black color
+	t.fillcolor('black')  # Set fill color to black
+	t.forward(60)  # Move forward to draw a line
+	t.left(115)  # Turn left to shape the next part
+	t.forward(75)  # Move forward to complete the next part of the ventilation
+	t.setheading(0)  # Set heading to 0 degrees
+	t.forward(70 + 20)  # Move forward to shape the remaining portion
+	t.right(90)  # Turn right by 90 degrees
+	t.fd(15)  # Move forward by 15 units
+
+	# Going back to the original position
+	t.setheading(0)
+	t.bk(85)  # Move backward by 85 units
+	t.setheading(175 - 115)  # Set the correct angle to continue
+	t.bk(75)  # Move backward by 75 units
+	t.rt(116)  # Turn the turtle right by 116 degrees
+	t.bk(75)  # Move backward by 75 units to complete the shape
+	t.end_fill()  # Fill the final shape with black color
+
+	# black ventilation part 2 with right side of mouth (Iron Man helmet)
+	t.pensize(5)  # Set pen size for drawing
+	t.pencolor('black')  # Set pen color to black
+	t.up()  # Lift pen to move without drawing
+	t.goto(183, -60)  # Move to starting point for the second ventilation part
+	t.begin_fill()  # Begin filling the shape with black color
+	t.fillcolor('black')  # Set fill color to black
+	t.down()  # Lower the pen to start drawing
+	t.setheading(180)  # Set heading to 180 degrees (left direction)
+	t.lt(60)  # Turn left by 60 degrees
+
+	# Draw second ventilation section with curved edges
+	for i in range(28):  # Loop to draw the curved section
+		t.forward(7)  # Move forward by 7 units
+		t.lt(3 / 2)  # Slightly turn left to form curve
+
+	# Draw the next portion of the ventilation shape
+	t.lt(90 + 67)  # Turn the turtle to the correct angle
+	t.forward(205)  # Draw the long horizontal line
+	t.end_fill()  # Fill the shape with black color
+	t.backward(205)  # Move backward to starting point
+
+	# Set heading to 180 degrees (left direction)
+	t.setheading(180)
+	t.lt(55)  # Turn left to continue the next section
+	t.begin_fill()  # Start filling with black color
+	t.fillcolor('black')  # Set fill color to black
+	t.forward(60)  # Move forward to shape the next part
+	t.rt(115)  # Turn right by 115 degrees to create the next segment
+	t.forward(75)  # Draw the next section of the shape
+	t.setheading(180)  # Set heading to 180 degrees (left direction)
+	t.forward(70 + 20)  # Move forward to complete the shape
+	t.lt(90)  # Turn left by 90 degrees
+	t.fd(15)  # Move forward by 15 units
+
+	# Going back to the starting position for this section
+	t.setheading(180)  # Set the heading to 180 degrees (left direction)
+	t.bk(65 + 20)  # Move backward by 65 + 20 units
+	t.setheading(180 - (175 - 115))  # Set heading to the correct angle
+	t.bk(75)  # Move backward by 75 units
+	t.lt(116)  # Turn left by 116 degrees
+	t.bk(75)  # Move backward by 75 units to complete the section
+	t.end_fill()  # Fill the final part with black color
+
+# defined a separate funtion to run the whole code
+def run_ironman_helmet():
+	draw_outer_helmet_shell()	# to draw outer helmet shell
+	draw_face_cover()	# to draw inner face cover
+	draw_eyes()	# to draw the eyes
+	draw_face_vantilation_with_mouth() # to draw face vantilation with mouth shape
+
+run_ironman_helmet()	# call the function to run the whole code.
+
+t.hideturtle() # Hide the turtle to prevent any interuption in looks
+turtle.done()   # Add this at the end of your code to keep the turtle window open
+
+# Here our iron_man_helmet project is completed..
+# i hope it would be appretiated..
+# i would be really happy for any further suggestions
+# thank you so much.
